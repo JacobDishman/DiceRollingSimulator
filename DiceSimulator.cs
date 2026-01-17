@@ -8,8 +8,8 @@ namespace DiceRollingSimulator
 
         public int[] RollDice(int numberOfRolls)
         {
-            // Array to store counts for sums 2-12
-            // Index 0 and 1 are unused; indices 2-12 hold the counts
+            // This array needs to store counts for sums 2-12 since you can't roll a 1 with 2 dice. 
+            // we use 13 since we 0 and 1 is impossible, and we don't wanna have to offest everything.
             int[] counts = new int[13];
 
             for (int i = 0; i < numberOfRolls; i++)
@@ -24,3 +24,4 @@ namespace DiceRollingSimulator
         }
     }
 }
+
